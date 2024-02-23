@@ -1,0 +1,13 @@
+/* style.css */
+body{
+  background-color: bisque;
+}
+h3 {
+  color: rgb(236, 14, 14);
+  background-color: rgb(17, 234, 183);
+}
+
+p {
+  color: rgb(8, 0, 255);
+  background-color: blueviolet;
+}
