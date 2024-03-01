@@ -1,0 +1,102 @@
+*{
+    outline: 1px solid red;
+  
+  }
+.bg_green{
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+  .name{
+    font-weight:5px;
+    font-size: larger;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+  }
+
+  .top_card 
+  {background-color: rgb(131, 229, 251);
+    /* padding: 8px; */
+    display: flex;
+    border: solid blue;
+  }
+
+  .top_card
+  {
+    flex: 1;
+  }
+
+.left_box,
+.right_box {
+    background-color: bisque;
+    margin: 5px;
+    width: 50%;
+    border: solid rgb(250, 176, 103)
+}
+
+.middle_box{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    background-color: bisque;
+    border: solid rgb(250, 176, 103)
+}
+
+.middle_left_center_box,
+.middle_right_center_box{
+   background-color: rgb(248, 128, 128);
+   border: solid red;
+   width: 50%;
+}
+/* this is for the middle section of the image  */
+.middle_center_box{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    padding: 0px;
+}
+
+.middle_left{
+    display: flex;
+    width: 50%;
+    margin-right: 5px;
+    background-color: rgb(248, 128, 128);
+    border:solid rgb(160, 93, 93);
+}
+
+.middle_top_right,
+.middle_bottom_right{
+background: rgb(248, 128, 128);
+border: solid  rgb(160, 93, 93);
+}
+
+.container_middle{
+    /* margin: 5px; */
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+/* this is for the images on bottom */
+.bottom_container{
+    padding: 5px;
+    display: flex;
+    gap: 5px ;
+    background-color:rgb(131, 229, 251);
+    border: solid blue;
+}
+
+.box_1,
+.box_4{
+    width: 40%;
+    background-color: rgb(158, 144, 237);
+    border: solid rgb(135, 101, 163);
+
+}
+
+.box_2,
+.box_3{
+    width: 20%;
+    background-color: bisque;
+    border: solid orange;
+}
