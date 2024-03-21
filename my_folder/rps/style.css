@@ -1,0 +1,102 @@
+* {
+    outline: 1px solid red;
+    padding: 0px;
+    margin: 0px;
+    /* min-width: 250px; */
+  }
+
+  .headers {
+    display: flex;
+    justify-content: space-between;
+    gap:2rem;
+    padding: 0.4rem;
+    background-color: rgb(32, 93, 30);
+    color: antiquewhite;
+  }
+
+  .first_level{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .txt_name{
+    display:block;
+
+  }
+  .second_level{
+    display: flex;
+    justify-content: space-between;
+    gap:1em;
+    padding: 0.4rem;
+    padding-left: 5em;
+
+    padding-right: 5em;
+  }
+
+  button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+  }
+  .third_level{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0.4rem;
+  }
+
+ .scoreboard{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    gap: 3rem;
+    
+  }
+
+  #player1_score,#cpu_score{
+    border: 3px solid black;
+    padding: 2rem;
+    color: black;
+    background-color: rgb(19, 175, 102);
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  #it{
+    height: 16em;
+    width: 13em;
+}
+
+#me{
+    height: 20em;
+    width: 10em;
+}
+#bg {
+    height: 15.5em;
+    width: 10em;
+}
+
+
+ .stack1{
+    position: relative;
+    z-index: 3;
+    height: 0em;
+    /* padding: 1em; */
+    
+ }
+
+ .stack2{
+    position: absolute;
+    z-index: 2;
+ }
+
+  footer{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    padding: 0.4rem;
+    background-color: rgb(32, 93, 30);
+    color: antiquewhite;
+  }
