@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strangest Cal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>The Strangest Calculator</header>
+    <div class="center_all">
+    <div class="cal_body">
+
+        <div class='top_level'>
+
+            <h3>The Strangest Calculator</h3>
+            <div class="the_screen">
+                <div class="equation" id="equation1"></div>
+                <div class="equation" id="equation2"></div>
+                <div class="equation" id="equation3"></div>
+                <div class="equation" id="equation4"></div>
+            </div>
+        </div>
+
+        <div class="middle_level">
+            <button>history</button>
+            <button>Back Space</button>
+        </div>
+
+        <div class="lower_level">
+            <div class="row_1">
+                <button class="button-64" id='sqrt'role="button"><span class="text">&#8730</span></button>
+                <button class="button-64" id='perent' role="button"><span class="text">%</span></button>
+                <button class="button-64" id='power' role="button"><span class="text">^</span></button>
+                    <button class="button-64"id='divide' role="button"><span class="text">/</span></button>
+            </div>
+            <div class="row_2">
+                <button id='seven'>7</button>
+                <button id='eight'>8</button>
+                <button id='nine'>9</button>
+                <button class="button-64" id='multi'role="button"><span class="text">x</span></button>
+            </div>
+            <div class="row_3">
+                <button id='four'>4</button>
+                <button id='five'>5</button>
+                <button id='six'>6</button>
+                <button class="button-64" id='sub' role="button"><span class="text">-</span></button>
+            </div>
+            <div class="row_4">
+                <button id='one'>1</button>
+                <button id='two'>2</button>
+                <button id='three'>3</button>
+                <button class="button-64" role="button"><span class="text">+</span></button>
+            </div>
+            <div class="row_5">
+                <button id='zero'>0</button>
+                <button id='pl_mi'>+/-</button>
+                <button id='dot'>.</button>
+                <button class="button-64" role="button"><span class="text">=</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>Thanks for stopping by Stranger</footer>
+    <script src="cal.js"></script>
+</body>
+
+</html>
+<!-- 
+    we are adding 
+    ^2,sqrt,%
+   - Users can get floating point numbers if they do the math required
+   - to get one, but they can’t type them in yet.
+   - Add a . button and let users input decimals! Make sure you don’t let them type more than one
+        though: 12.3.56.5. It is hard to do math on these numbers.
+        (disable the decimal button if there’s already one in the display)
+-Make it look nice! This is a great project to practice your CSS skills.
+    -At least make the operations a different color from the keypad buttons.
+- Add a “backspace” button, so the user can undo if they click the wrong number.    
+        Add keyboard support!
+-sound effects
+ -->
