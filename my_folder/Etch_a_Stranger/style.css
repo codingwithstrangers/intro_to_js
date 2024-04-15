@@ -54,7 +54,8 @@ h3 {
 }
 
 .green_text{
-  color: green;
+  color: rgb(255, 255, 255);
+  /* border: 1px solid black; */
 }
 
 .etch {

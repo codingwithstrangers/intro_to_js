@@ -1,3 +1,25 @@
+
+// we want to toggle on and of mouse and keyboard
+// when button is pressed we wantthe color to change
+document.getElementById('change').addEventListener('click', function() {
+  // Toggle green_text class for mouse_change element
+  document.getElementById('mouse_change').classList.toggle('green_text');
+  
+  // Toggle green_text class for key_change element
+  document.getElementById('key_change').classList.toggle('green_text');
+  
+  // Check if mouse_change is now green
+  if (document.getElementById('mouse_change').classList.contains('green_text')) {
+    // Remove green_text class from key_change if present
+    document.getElementById('key_change').classList.remove('green_text');
+  } else {
+    // Remove green_text class from mouse_change if present
+    document.getElementById('mouse_change').classList.remove('green_text');
+  }
+});
+
+
+
 // we want a function that makes the div squares of the screen
 function grid() {
   let collum = document.getElementById("squares");
@@ -10,16 +32,63 @@ function grid() {
     divCell.className = "cell";
     divCell.innerText = "";
     row.append(divCell);
+    // this will check if mouse is active and you can draw only on mouse
     divCell.onmouseover = function(){
-      divCell.style.backgroundColor= 'red';
-      };
-    
+      if(document.getElementById('mouse_change').classList.contains('green_text')){
+        divCell.style.backgroundColor= 'red';
+      }else{
+        divCell.style.backgroundColor= 'color';
+      }
+    }
+    document.addEventListener('keydown', function(event){
+      if(document.getElementById('key_change').classList.contains('green_text')){
+        if (event.key ==='arrowleft'){
+          moveleft(divCell);
+        }
+      };})
+
   }
+
+
   
   collum.append(row);
 }
+
+function moveleft(cell){
+  cell.style.backgroundColor= 'black';
+}
 }
 grid();
+
+
+// make the keys draw
+// find key_change
+// document.addEventListener('keydown', function(event){
+//   const key_change= document.getElementById('key_change');
+//   const key_active = key_change.classList.contains('green_text');
+//   if(key_active){
+//     // const cells = document.querySelectorAll('.cell');
+//     // this is how we find the selected cell
+//     const selectedCell = document.querySelector('.selected');
+
+//     if (selectedCell) {
+//       selectedCell.classList.remove('selected');
+//     }
+//     // figure out key selections
+//     let current_cell;
+//     // switch is like if statements and can be used to manage conditions
+//     switch(event.key){
+//       case 'arrowleft':
+//         current_cell = selectedCell.previousElementSibling;
+
+//     case 'arrowup':
+
+
+//     }
+
+//   }
+// })
+
 
 
 //lets create a simple color change with mouse
@@ -91,25 +160,6 @@ document.getElementById('shake').addEventListener('click',function(){
   // Call the functions in sequence
   shakeLeftRight();
   setTimeout(shakeUpDown, 400);
-});
-
-// we want to toggle on and of mouse and keyboard
-// when button is pressed we wantthe color to change
-document.getElementById('change').addEventListener('click', function() {
-  // Toggle green_text class for mouse_change element
-  document.getElementById('mouse_change').classList.toggle('green_text');
-  
-  // Toggle green_text class for key_change element
-  document.getElementById('key_change').classList.toggle('green_text');
-  
-  // Check if mouse_change is now green
-  if (document.getElementById('mouse_change').classList.contains('green_text')) {
-    // Remove green_text class from key_change if present
-    document.getElementById('key_change').classList.remove('green_text');
-  } else {
-    // Remove green_text class from mouse_change if present
-    document.getElementById('mouse_change').classList.remove('green_text');
-  }
 });
 
 
