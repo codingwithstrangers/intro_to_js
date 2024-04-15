@@ -15,11 +15,6 @@
 //   return a+b;
 // }
 
-// function subtract(a,b)
-// {
-//   return a-b;
-// }
-
 
 
 const num_key = document.querySelectorAll(".lower_level button");
@@ -36,17 +31,25 @@ function key_click(event) {
   const buttonValue = event.target.textContent;
   // this is how the math will start 
     if (buttonValue === '=') {
-      if (key_jail.length > 0) {
+      if(key_jail.length <3){
+      let equal_sign = event.target.textContent;
         // find the equal sign by checking the key jail for possible code breakers
-        let equal_sign = key_jail.indexOf('=');
-        // console.log(e)
-
-      }
-      if(equal_sign===key_jail.length-1 ||key_jail===0){
+        console.log(equal_sign)
         // send error message
         document.getElementById(equationIDs[1]).textContent = "ain't No Numbers bro";
         document.getElementById(equationIDs[1]).style.textAlign ='center'
-        return;
+      }else{
+      // }else{we need to make for loop to check for + in key jail
+      // need to check plus is not in front of number 
+      let has_plus = false;
+      for(let i =0; i<key_jail.length - 1;i++){
+        if(key_jail[i]==='+'){
+          has_plus=true 
+        }
+      }
+      // if the + is not surrounded by a number send error message
+      
+
       }
     }
 
