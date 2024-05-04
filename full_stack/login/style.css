@@ -13,11 +13,11 @@
   /* the top */
   body{
     display: flex;
-    justify-content: center;
-    background-image: linear-gradient(4deg, #21c0ff 0, #12ebff, #29dbff);
+    background-image: linear-gradient(291deg, #48c6f8, #fbfddf, #05b8ff);
     min-width: 100%;
     min-height: 100%;
-    flex-direction: column;
+    /* flex-direction: row; */
+    justify-content: center;
   }
 
   /* Font ish */
@@ -41,11 +41,6 @@
   display: flex;
   justify-content: center;
 }
-.smile_sun{
-  width: 20%;
-    position: absolute;
-}
-
   *{
     border: rgb(232, 12, 12) 1px solid;
     margin: 0;
@@ -53,6 +48,8 @@
     font-family: "Honk", system-ui;
     color: black;
   }
+
+  /* Top Page */
   .top_text{
     display: flex;
     flex-direction: column;
@@ -63,35 +60,47 @@
     font-family: "Honk", system-ui;   
     width: 100%;
   }
-/* 
-  p{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    word-wrap: break-word;
-    font-size: x-large;
-    max-width: 60%;
-    font-family: "Jersey 10 Charted", sans-serif;
-  } */
-
+.sun{
+  background-image: url(images/the_sun.png);
+    background-size: cover;
+    height: 18%;
+    width: 11%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    /* padding: 50px; */
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0))
+}
 
 /* The middle */
 .stranger {
-  right: 25%;
+  left: 43%;
   position: absolute;
-  display: flex;
-  /* max-width: 20%; */
-  scale: 40%;
-  bottom: -24%;
-  justify-content: center;
-  flex-wrap: nowrap;
+  background-size: cover;
+  bottom: 4%;
+  height: 33%;
+  width: 15%;
+  z-index: 0;
+  display: block;
+  background-image: url(images/shirtdesign.png);
+  /* -webkit-animation-name: bob;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate; */
 }
- .backwave{
-  position: relative;
-    display: flex;
-    width: 100%;
-    max-height: 300px;
- }
+ .bigwave{
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  z-index: 0;
+  width: 103%;
+  overflow: visible;
+  height: 22%;
+  background-image: url(images/1920x380wave.png);
+  background-size: cover;
+
+}
 
  .login_box_bg{
   display: flex;
@@ -101,8 +110,23 @@
     align-content: center;
     align-items: center;
     font-size: x-large;
-    margin-top: 20%;
+    position: absolute;
+    top: 9%;
+    left: 23%;
+    z-index: 1;    
+    /* margin-top: 9%; */
   
+ }
+
+ .login_wrapper{
+  position: fixed;
+  left:0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  /* position: relative; */
  }
 
  .box_container{
@@ -147,8 +171,85 @@ justify-content: flex-end;
   justify-content: center;
   gap: 15px;
   align-items: end;
+  position: absolute;
+  top: 78%;
+  left: 1%;
+  width: 88%;
+  z-index: 5;
+  padding: 5%;
+  height: 01%;
  }
+ .twitter{
+  background-image: url(images/tweet.png);
+    position: absolute;
+    background-size: cover;
+    height: 48%;
+    width: 5%;
+    top: 10%;
+    left: 20%;
+    border: 0;
+    filter: drop-shadow(-1px 0px .5px white);
+}
 
+.discord{
+  background-image: url(images/discord.png);
+    position: absolute;
+    background-size: cover;
+    height: 48%;
+    width: 5%;
+    top: 10%;
+    left: 29%;
+    border: 0;
+    filter: drop-shadow(-1px 0px .5px white);
+}
+
+.twitch{
+  background-image: url(images/twitch.png);
+    position: absolute;
+    background-size: cover;
+    height: 48%;
+    width: 5%;
+    top: 10%;
+    left: 3%;
+    border: 0;
+    filter: drop-shadow(-1px 0px .5px white);
+}
+
+.youtube {
+  background-image: url(images/youtube.png);
+  position: absolute;
+  background-size: cover;
+  height: 48%;
+  width: 5%;
+  top: 10%;
+  left: 13%;
+  border: 0;
+  filter: drop-shadow(-1px 0px .5px white);
+}
+
+.spotify{
+  background-image: url(images/twitch.png);
+    position: absolute;
+    background-size: cover;
+    height: 48%;
+    width: 5%;
+    top: 10%;
+    left: 3%;
+    border: 0;
+    filter: drop-shadow(-1px 0px .5px white);
+}
+
+.facebook{
+  background-image: url(images/twitch.png);
+    position: absolute;
+    background-size: cover;
+    height: 48%;
+    width: 5%;
+    top: 10%;
+    left: 3%;
+    border: 0;
+    filter: drop-shadow(-1px 0px .5px white);
+}
  .button_class{
   display: flex;
   flex-direction: column;
