@@ -3,3 +3,4 @@
 3. make sun and moon
 4. use time of user to select travel
 5. make night mode page 
+6. easter egg make stranger flip in water when email is "do a barrel roll"

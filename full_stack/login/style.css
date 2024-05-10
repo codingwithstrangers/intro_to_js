@@ -47,6 +47,7 @@
     padding: 0;
     font-family: "Honk", system-ui;
     color: black;
+    overflow: hidden;
   }
 
   /* Top Page */
@@ -60,46 +61,157 @@
     font-family: "Honk", system-ui;   
     width: 100%;
   }
+
+.bg_class{
+position: relative;
+width: 100%;
+height: 100%;
+  }
 .sun{
   background-image: url(images/the_sun.png);
     background-size: cover;
     height: 18%;
     width: 11%;
-    position: absolute;
-    top: 10%;
-    left: 10%;
+    position: fixed;
+    top: 83%;
+    left: 0%;
     /* padding: 50px; */
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0))
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    animation: 46s cubic-bezier(0.56, 0.34, 0.17, 0.97) infinite sunset;
 }
 
+@keyframes sunset {
+  0% {
+    top: 83%;
+    left: 0%;
+    scale: 3;
+}
+25% {
+    top: 37%;
+    left: 12%;
+}
+50% {
+    top: 1%;
+    left: 45%;
+}
+75% {
+    top: 85%;
+    left: 109%;
+}
+100% {
+    top: 83%;
+    left: -1%;
+}}
+
+.moon{
+  background-image: url(images/moon1.png);
+    background-size: cover;
+    height: 23%;
+    width: 13%;
+    position: fixed;
+    top: 83%;
+    left: 0%;
+    /* padding: 50px; */
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    animation: 46s cubic-bezier(0.56, 0.34, 0.17, 0.97) infinite moonset;
+}
+
+@keyframes moonset {
+  0% {
+    top: -14%;
+    left: 94%;
+    scale: 1.5;
+    rotate: 341deg;
+}
+25% {
+    top: 32%;
+    left: 77%;
+    rotate: 293deg;
+}
+
+50% {
+    top: 80%;
+    left: 42%;
+    scale: 2.5;
+    rotate: 251deg;
+}
+75% {
+    top: -21%;
+    left: -10%;
+    rotate: 139deg;
+    scale: .80;
+}
+100% {
+    top: -21%;
+    left: 109%;
+}}
 /* The middle */
 .stranger {
   left: 43%;
   position: absolute;
   background-size: cover;
-  bottom: 4%;
+  bottom: 0%;
   height: 33%;
   width: 15%;
-  z-index: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  /* rotate: 27deg; */
   display: block;
   background-image: url(images/shirtdesign.png);
-  /* -webkit-animation-name: bob;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate; */
+  animation: bob 6s ease-out infinite;
 }
+@keyframes bob {
+  0% {
+    transform: translate(2px, 0vh) rotate(0.03turn);
+}
+25% {
+    transform: translate(2px, 3vh) rotate(.095turn);
+}
+
+50% {
+    transform: translate(-6px, -2vh) rotate(0.04turn);
+}
+75% {
+    transform: translate(2px, 3vh) rotate(.095turn);
+}
+100% {transform: translate(2px, 1vh) rotate(0.03turn);
+}}
+
  .bigwave{
   position: fixed;
   left: 0px;
-  bottom: 0px;
+  bottom: -2%;
   z-index: 0;
   width: 103%;
   overflow: visible;
   height: 22%;
   background-image: url(images/1920x380wave.png);
   background-size: cover;
+  filter: hue-rotate(341deg) brightness(66%) contrast(80%);
+}
 
+.movingwave{
+  position: fixed;
+  /* background-image: url(images/1920x380wave.png); */
+  left: 0%;
+  bottom: 0px;
+  width: 125%;
+  overflow: hidden;
+  height: 13%;
+  background-image: url(images/1920x380wave.png);
+  background-size: cover;
+  animation: 6s cubic-bezier(0.56, 0.34, 0.17, 0.97) infinite wave;
+  z-index: 4;
+}
+
+/* .icon_drift1{
+  animation:6s cubic-bezier(0.56, 0.34, 0.17, 0.97) infinite side_to_side;} */
+
+@keyframes 
+wave {
+  0%{ left: -10%; }
+    50% { left: 0%; }
+    100% { left: -10%;}
 }
 
  .login_box_bg{
@@ -112,7 +224,7 @@
     font-size: x-large;
     position: absolute;
     top: 9%;
-    left: 23%;
+    left: 8%;
     z-index: 1;    
     /* margin-top: 9%; */
   
@@ -143,18 +255,21 @@
  }
 
  .login_box{
+  background-image: url(images/islandresize.png);
+  background-size: cover;
   justify-content: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
-  background-color:  purple;
-  padding: 10px;
+  /* background-color: purple; */
+  padding: 30px 10px;
  }
-/* label{
-  min-width: 40px;
- } */
+
+.headline{
+  font-size: 37px;
+ }
  input{
   height: 100%;
  } 
@@ -163,7 +278,6 @@
 display: flex;
 justify-content: flex-end;
  }
-
 
  /* lower page */
  .socials{
@@ -179,76 +293,65 @@ justify-content: flex-end;
   padding: 5%;
   height: 01%;
  }
- .twitter{
+ .tiktok,.twitter,.discord,.twitch,.youtube,.spotify,.facebook {
   background-image: url(images/tweet.png);
     position: absolute;
     background-size: cover;
     height: 48%;
+    z-index: 5;
     width: 5%;
-    top: 10%;
-    left: 20%;
+    top:  31%;
+    left: 70%;
     border: 0;
     filter: drop-shadow(-1px 0px .5px white);
-}
+    animation:6s cubic-bezier(0.56, 0.34, 0.17, 0.97) infinite up_to_down}
 
+.tiktok{
+  background-image: url(images/tiktok.png);
+  top: 46%;
+  left: 30%;
+  animation:6s cubic-bezier(0.56, 0.34, 0.17, 0.97) infinite up_to_down;
+}
+@keyframes 
+up_to_down {
+  0% {transform: translate(0,-15px);}
+50% {transform: translate(0px);}
+100% {transform: translate(0,-15px);}
+}
 .discord{
   background-image: url(images/discord.png);
-    position: absolute;
-    background-size: cover;
-    height: 48%;
-    width: 5%;
-    top: 10%;
-    left: 29%;
-    border: 0;
-    filter: drop-shadow(-1px 0px .5px white);
+  top: 46%;
+  left: 59%;
+}
+@keyframes 
+side_to_side {
+  0% {transform: translate(-15px);}
+50% {transform: translate(0px);}
+100% {transform: translate(-15px);}
 }
 
 .twitch{
   background-image: url(images/twitch.png);
-    position: absolute;
-    background-size: cover;
-    height: 48%;
-    width: 5%;
-    top: 10%;
+    top: 33%;
     left: 3%;
-    border: 0;
-    filter: drop-shadow(-1px 0px .5px white);
-}
+    }
 
 .youtube {
   background-image: url(images/youtube.png);
-  position: absolute;
-  background-size: cover;
-  height: 48%;
-  width: 5%;
-  top: 10%;
-  left: 13%;
-  border: 0;
-  filter: drop-shadow(-1px 0px .5px white);
+  top: 29%;
+  left: 15%;
 }
 
 .spotify{
-  background-image: url(images/twitch.png);
-    position: absolute;
-    background-size: cover;
-    height: 48%;
-    width: 5%;
-    top: 10%;
-    left: 3%;
-    border: 0;
-    filter: drop-shadow(-1px 0px .5px white);
+  background-image: url(images/spotify.png);
+    top: 29%;
+    left: 91%;    
 }
 
 .facebook{
-  background-image: url(images/twitch.png);
-    position: absolute;
-    background-size: cover;
-    height: 48%;
-    width: 5%;
-    top: 10%;
-    left: 3%;
-    border: 0;
-    filter: drop-shadow(-1px 0px .5px white);
+  background-image: url(images/facebook.png);
+    top: 52%;
+    left: 79%;
 }
  .button_class{
   display: flex;
