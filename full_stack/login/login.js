@@ -81,8 +81,8 @@ const moon = document.querySelector(".moon");
 // Function to update the position and scale of the sun
 function updateSunPosition() {
   const currentDate = new Date();
-//   const hours = currentDate.getHours();
-  const hours = currentDate.getSeconds() % 24;
+  const hours = currentDate.getHours();
+//   const hours = currentDate.getSeconds() % 24;
   const minutes = currentDate.getMinutes();
   const seconds = currentDate.getSeconds();
 
@@ -119,9 +119,9 @@ function updateSunPosition() {
 // Function to update the position and scale of the moon
 function updateMoonPosition() {
   const currentDate = new Date();
-//   const hours = currentDate.getHours();
+  const hours = currentDate.getHours();
 // const hours =1;
-  const hours = currentDate.getSeconds() % 24;
+//   const hours = currentDate.getSeconds() % 24;
   const minutes = currentDate.getMinutes();
   const seconds = currentDate.getSeconds();
   // Calculate position and scale based on the current time
@@ -164,10 +164,10 @@ moon.style.transform = 'scale(' + moonScale + ') rotate(' + moonRotate + ')';
 // Function to update background based on the time of day
 function changeBackground() {
     const currentDate = new Date();
-    // const hours = currentDate.getHours();
+    const hours = currentDate.getHours();
     const minutes = currentDate.getMinutes();
     const seconds = currentDate.getSeconds();
-    const hours = currentDate.getSeconds() % 24
+    // const hours = currentDate.getSeconds() % 24
 
     // Calculate total time in seconds
     const totalSeconds = hours * 3600 + minutes * 60 + seconds;
@@ -210,38 +210,108 @@ setInterval(() => {
   changeBackground();
 }, 1000);
 
-// // easter egg
-// // JavaScript
-// const emailInput = document.querySelector('.email');
-// const passwordInput = document.querySelector('.password');
-// const loginButton = document.querySelector('.login_button');
-// const stranger = document.querySelector('.stranger');
 
-// // Function to perform a 360-degree rotation
-// function doBarrelRoll() {
-//     stranger.style.transform = 'rotate(360deg)';
+// Easter_egg
+// make a fuction for changing moon
+ 
+function soul_easter_egg(){
+    // variables
+    const email = document.querySelector('.email').value.trim().toLowerCase();
+    const password = document.querySelector('.password').value.trim();
+
+    // check if the word was entered 
+    if (email.includes('soul')&& password===''){
+        //alert('test worked')
+        // we want to change the moon image 
+        moon.style.backgroundImage= "url('images/moon2.png')"
+        moon.style.transform = 'scale(4)';
+        moon.style.transform = 'rotate(0deg)';
+    }
+}
+document.getElementById('green_button').addEventListener('click', soul_easter_egg);
+document.addEventListener('keydown', function(event){
+    if (event.key ==='Enter'){
+        soul_easter_egg();
+    }
+});
+
+ 
+function roll_easter_egg(){
+    // variables
+    const stranger = document.querySelector('.stranger');
+    const email = document.querySelector('.email').value.trim().toLowerCase();
+    const password = document.querySelector('.password').value.trim();
+
+    // check if the word was entered 
+    if (email.includes('do a barrel roll')&& password===''){
+        //alert('test worked')
+        // stranger will do a roatation 
+        stranger.style.animation = 'roll 3s linear forwards';
+        
+    }
+}
+document.getElementById('green_button').addEventListener('click', roll_easter_egg);
+document.addEventListener('keydown', function(event){
+    if (event.key ==='Enter'){
+        roll_easter_egg();
+    }
+});
+
+
+// var realPassword = ''; // Variable to store the real user's password
+
+// // Attach event listener to password input field
+// document.querySelector('.password').addEventListener('input', function(event) {
+//     // Store the real user input in the realPassword variable
+//     realPassword = event.target.value;
+//     // Replace the password value with random characters
+//     var randomChars = generateRandomChars(realPassword.length);
+//     event.target.value = randomChars;
+// });
+
+// // Function to generate random characters
+// function generateRandomChars(length) {
+//     var chars = "!@#$%^&*()_+-=[]{}|;:,.<>?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+//     var randomChars = '';
+//     for (var i = 0; i < length; i++) {
+//         var randomIndex = Math.floor(Math.random() * chars.length);
+//         randomChars += chars[randomIndex];
+//     }
+//     return randomChars;
 // }
 
-// // Add event listener for login button click
-// loginButton.addEventListener('click', function() {
-//     const emailValue = emailInput.value.toLowerCase(); // Convert email value to lowercase for case-insensitive comparison
-//     const passwordValue = passwordInput.value.trim(); // Trim password value to remove any leading/trailing spaces
-
-//     // Check if email input contains the phrase "Do a barrel roll" and password input is empty
-//     if (emailValue.includes('do a barrel roll') && passwordValue === '') {
-//         doBarrelRoll(); // Perform 360-degree rotation
-//     }
+// // Function to handle login button click
+// document.getElementById('green_button').addEventListener('click', function() {
+//     // Access the realPassword variable and do something with it (e.g., authentication)
+//     console.log("Real Password: " + realPassword);
+//     // Clear the realPassword variable after use (for security reasons)
+//     realPassword = '';
 // });
 
-// // Optional: You can also trigger the barrel roll if the user presses Enter in the password field
-// passwordInput.addEventListener('keydown', function(event) {
-//     if (event.key === 'Enter') {
-//         const emailValue = emailInput.value.toLowerCase(); // Convert email value to lowercase for case-insensitive comparison
-//         const passwordValue = passwordInput.value.trim(); // Trim password value to remove any leading/trailing spaces
 
-//         // Check if email input contains the phrase "Do a barrel roll" and password input is empty
-//         if (emailValue.includes('do a barrel roll') && passwordValue === '') {
-//             doBarrelRoll(); // Perform 360-degree rotation
-//         }
-//     }
-// });
+// version above works 
+var realPassword = "";
+
+// function for changing password
+function maskPassword(){
+    var passwordInput = document.getElementById('password');
+    var maskedPassword = "";
+    realPassword = passwordInput.value
+    console.log('real Password: ',realPassword)
+    // now to change the input into ***
+    for(var i =0; i < realPassword.length; i++) {
+        maskedPassword += "*";
+    }
+    passwordInput.value = maskedPassword;
+}
+
+// listeners
+document.getElementById('password').addEventListener("keydown",function(event){
+if (event.key=="Enter"){
+    maskPassword();
+}
+});
+
+document.getElementById("green_button").addEventListener("click", function() {
+    maskPassword();
+});
