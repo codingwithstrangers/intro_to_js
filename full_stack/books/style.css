@@ -1,0 +1,112 @@
+
+/* Main container to use CSS grid */
+*{
+  border: 1px rgb(154, 57, 154) solid;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for Grid */
+
+.grid_container{
+  /* background-color: coral; */
+  min-height: 100vh;
+  /* min-width: 100vw; */
+  display: grid;
+  grid-template-columns: 13rem 1fr;
+    grid-template-rows: 9rem 34rem 1fr;
+    grid-template-areas: 
+    "header header "
+    "left_nav right_nav"
+    "history stats";
+  /* grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  /* grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px; */
+}
+
+
+
+header{
+  grid-area: header;
+  background-color: rgb(146, 163, 158);
+}
+
+left_nav{
+  grid-area: left_nav;
+  background-color: rgb(167, 246, 219);
+}
+
+right_nav{
+  grid-area: right_nav;
+  background-color: rgb(215, 215, 215);
+}
+
+history{
+  grid-area: history;
+  background-color: rgb(215, 215, 215);
+}
+
+stats{
+  grid-area: stats;
+  background-color: rgb(167, 246, 219);
+}
+
+/* Header */
+.header_container{
+  display: flex;
+  justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.mag_img{
+  background-image: url(images/mag200px.png);
+  background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+.search_bar_container{
+  display: flex;
+  width: 80%;
+}
+
+.search_input{
+  width: 75%;
+}
+.name_plate{
+display: flex;
+text-align: center;
+align-items: center;
+}
+
+.icon{
+  background-image: url(images/004.png);
+  background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+/* Left Nav */
+.nav_input{
+  width: 100%;
+}
+.checkbox_container{
+  display: flex;
+  flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Right_Nav */
+.r_nav_btn_containers{
+  display: flex;
+  flex-direction: row-reverse;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* History */
+.his_tab{
+  display: flex;
+}

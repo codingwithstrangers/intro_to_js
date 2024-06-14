@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strangest Library</title>
+</head>
+
+<body>
+    <div class="grid_container">
+        <!-- <div class="item_1">1</div>
+        <div class="item_2">2</div>
+        <div class="item_3">3</div>
+        <div class="item_4">4</div>
+       -->
+       <header>
+        <div class="header_container">
+        <div class="search_bar_container">
+        <div class="mag_img"></div>
+        <input class="search_input" id="search_input"  placeholder="Enter book title"></input>
+        <button class="search_btn" id="search_btn" onclick="search_book()">search</button>
+    </div>
+    <div class="name_plate">
+        <div class="icon">image</div>
+        <p class="user_name"> @CodingwithStranger</p>
+        <div class="image_header_container">
+            <div class="bell"></div>
+            <div class="mail"></div>
+        </div>
+    </div>
+</div>
+       </header>
+       <left_nav>
+        <div class="nav_cell">
+        <p> Title</p>
+        <input class="nav_input_title"></input>
+    </div>
+    <div class="nav_cell">
+        <p> Author's First Name</p>
+        <input class="nav_input_first"></input>
+    </div>
+    <div class="nav_cell">
+        <p>Author's Last Name</p>
+        <input class="nav_input_last"></input>
+    </div>
+    <div class="nav_cell">
+        <p>Page Total</p>
+        <input class="nav_input_page"></input>
+    </div>
+    <div class="nav_cell">
+        <p>Book Year</p>
+        <input class="nav_input_year"></input>
+    
+        <div class="checkbox_container">
+            <p>Have you read this book?</p>
+            <label>
+              <input type="radio" name="bookRead" value="Yes"> Yes
+            </label>
+            <label>
+              <input type="radio" name="bookRead" value="No"> No
+            </label>
+          </div>
+<button class="btn_submit"  onclick="submitform()">Submit</button> 
+</div>
+    </left_nav>
+       <right_nav>
+        <div class="r_nav_cell">
+            <p> Title:</p>
+            <p class="r_nav_results_title">Heero</input>
+        </div>
+        <div class="r_nav_cell">
+            <p> Author's First Name:</p>
+            <p class="r_nav_results_first">Heero</input>
+        </div>
+        <div class="r_nav_cell">
+            <p> Author's Lasdt Name:</p>
+            <p class="r_nav_results_last">Stranger</input>
+        </div>
+        <div class="r_nav_cell">
+            <p> Page Total:</p>
+            <p class="r_nav_results_page">405 pg</input>
+        </div>
+        <div class="r_nav_cell">
+            <p>Book Year:</p>
+            <p class="r_nav_results_year">1980</input>
+        </div>
+        <div class="r_nav_bookread">
+            <p>Check if You have read this book</p>
+            <p class= "y_n_book"> Yes</p>
+        </div>
+        <div class="r_nav_btn_containers">
+        <button class="btn_delete"> Delete</button>
+        <button class="btn_edit"> Edit</button>
+    </div>
+       </right_nav>
+       <history>
+        <div class="his_tab">
+            <p> Title:</p>
+            <p class="his_results"placeholder="Title"></input>
+        </div>
+        <div class="his_tab">
+            <p> Author's First Name:</p>
+            <p class="his_results"placeholder="First Name"></input>
+        </div>
+        <div class="his_tab">
+            <p> Author's Last Name:</p>
+            <p class="his_results"placeholder="Last_Name"></input>
+        </div>
+        <div class="his_tab">
+            <p> Page Total:</p>
+            <p class="his_results"placeholder="Total Page No."></input>
+        </div>
+        <div class="his_tab">
+            <p>Book Year:</p>
+            <p class="his_results"placeholder="Year"></input>
+        </div>
+        <div class="r_nav_bookread">
+            <p>Have read this book</p>
+            <p class= "y_n_book"> Yes</p>
+        </div>
+       </history>
+        <stats>5
+            <div class="num_book_total">
+                <p> number of books add to libraby:</p>
+                <p>284 books add</p>
+                <p>211 books read</p>
+            </div>
+            <div class="site_announcements">
+                <h4> Announcements</h4>
+                <p>***1st Place: robodom_ With 22 points is Leading The way coding32Zemi***2nd Place: shak390 With 11 points is Not Far Behind coding32Valor***3rd Place: lostnotes With 6 points Will Not Be Ignored coding32Key***jkpockets, Is in the back but we see you</p>
+            </div>
+        </stats>
+</body>
+<script src="book.js"></script>
+</html>
