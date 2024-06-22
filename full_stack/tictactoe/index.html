@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Triple T</title>
+</head>
+
+<body>
+    <div class="grid_container">
+        <header>
+            <div class="header_container">
+                <div class="player_1">
+                    <div class='image_container'>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="player1_info">
+                        <p>@Name</p>
+                        <p>Rank</p>
+                        <p id="player1_turn">Your Turn</p>
+                    </div>
+                    </div>
+                    <div class="vs_container">
+                        <div class="vs"></div>
+                    </div>
+                    <div class="player_2">
+                        <div class='image_container'>
+                            <div class="icon"></div>
+                        </div>
+                        <div class="player2_info">
+                            <p>@Skynet</p>
+                            <p>Rank</p>
+                            <p id="player2_turn">Your Turn</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scoreboard_container">
+                    <div class="score_info">
+                        <div class="player_1score">
+                            <p>0</p>
+                        </div>
+                        
+                        <div class="player_2score">
+                            <p>0</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="match_point">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                    </div>
+                
+        </header>
+
+        <main>
+            <div class="main_container">
+
+                <row1_1>
+                    <div class="cell1" id="cell1_1"></div>
+                </row1_1>
+                <row1_2>
+                    <div class="cell1" id="cell1_2"></div>
+                </row1_2>
+                <row1_3>
+                    <div class="cell1" id="cell1_3"></div>
+                </row1_3>
+            
+                <row2_1>
+                    <div class="cell2" id="cell2_1"></div>
+                </row2_1>
+                <row2_2>
+                    <div class="cell2" id="cell2_2"></div>
+                </row2_2>
+                <row2_3>
+                    <div class="cell2" id="cell2_3"></div>
+                </row2_3>
+            
+                <row3_1>
+                    <div class="cell3" id="cell3_1"></div>
+                </row3_1>
+                <row3_2>
+                    <div class="cell3" id="cell3_2"></div>
+                </row3_2>
+                <row3_3>
+                    <div class="cell3" id="cell3_3"></div>
+                </row3_3>
+            </div>
+
+        </main>
+        <stats>
+            <div class="status_container">
+                <div class="player1_stats_card">
+                    <p class="player1_win_count">10 wins</p>
+                    <div class="player1_victims">
+                        <p class="loser_p1">Stranger</p>
+                        <p class="loser_p2">Stranger</p>
+                        <p class="loser_p3">Stranger</p>
+                    </div>
+                </div>
+                <button id="start">button</button>
+                <div class="player2_stats_card">
+                    <p class="player2_win_count">10 wins</p>
+                    <div class="player2_victims">
+                        <p class="p2loser_p1">Stranger</p>
+                        <p class="p2loser_p2">Stranger</p>
+                        <p class="p2loser_p3">Stranger</p>
+                    </div>
+                </div>
+            </div>
+        </stats>
+    </div>
+
+</body>
+<script src="tictactoe.js"></script>
+</html>

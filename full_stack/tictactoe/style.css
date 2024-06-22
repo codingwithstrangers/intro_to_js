@@ -1,0 +1,261 @@
+*{
+padding: 0;
+
+margin: 0;
+/* border: 1px green solid; */
+}
+p{
+  font-size: x-large;
+}
+
+   .grid_container{ 
+    min-height: 100vh;
+    /* min-width: 100vh; */
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    grid-template-rows: 12rem 37rem 9rem;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "stats stats";
+}
+header{
+    grid-area: header;
+    background-color: rgb(152 241 215);
+  }
+
+  main{
+    grid-area: main;
+    background-color: black;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  stats{
+    grid-area: stats;
+    background-color: rgb(152 241 215);
+  }
+
+
+  /* header */
+  .header_container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-direction: row;
+    margin: 5px;
+  }
+
+    .player1_info{
+      display: flex;
+      flex-direction: column;
+    }
+    .player2_info{
+      flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    }
+
+    .highlight {
+      color: red;
+  }
+  .icon{
+    display: flex;
+    background-image: url(image/stranger.png);
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin: 3px;
+  }
+  .player_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(253, 255, 252);
+/* margin-left: 15px; */
+  }
+  .score_info{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
+.vs_container{
+  display: flex;
+  align-items: center;
+}
+
+.vs{
+  display: flex;
+    background-image: url(image/VS.png);
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    margin: 3px;
+}
+  
+  .player_2{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(253, 255, 252);
+  }
+
+  .circle1, .circle2, .circle3 {
+    border-radius: 300px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid black; */
+    background-color: rgb(193, 194, 193)
+  }
+
+  .match_point{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+  
+  }
+
+  .scoreboard_container{
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 5px;
+  }
+
+  .circle1{
+    background-color: rgb(0, 0, 0);
+  }
+  /*Main */
+  main{
+    border: black 5px solid;
+  }
+  .main_container{
+    min-height: 100vh;
+    /* margin-bottom: 1000px; */
+    /* min-width: 100vh; */
+    /* background-color:white; */
+    border: black 3px solid;
+    display: grid;
+    grid-template-columns: 33% 1fr 33%;
+    grid-template-rows: 20% 20% 23%;
+    grid-template-areas: 
+    "row1_1 row1_2 row1_3"
+    "row2_1 row2_2 row2_3"
+    "row3_1 row3_2 row3_3";
+  }
+
+  row1_1{
+    grid-area: row1_1;
+    background-color:white;
+    border: black 2px solid;
+  }
+
+  row1_2{
+    grid-area: row1_2;
+    background-color:rgb(36, 211, 185);
+    border: black 2px solid;
+  }
+
+  row1_3{
+    background-color:white;
+    border: black 2px solid;
+  }
+
+  row2_1{
+    background-color:rgb(36, 211, 185);
+    border: black 2px solid;
+  }
+
+  row2_2{
+    background-color:white;
+    border: black 2px solid;
+  }
+
+  row2_3{
+    background-color:rgb(36, 211, 185);
+    border: black 2px solid;
+  }
+
+  row3_1{
+    grid-area: row3_1;
+    background-color:white;
+  }
+
+  row3_2{
+    background-color:rgb(36, 211, 185);
+    border: black 2px solid;
+  }
+
+  row3_3{
+    background-color:white;
+    border: black 2px solid;
+  }
+
+  .cell img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* footer */
+.status_container{
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.player2_stats_card, .player1_stats_card {
+  background-color: rgb(253, 255, 252);
+}
+/* this is the tablet view  */
+
+
+@media only screen 
+    and (min-width: 768px)  { 
+   .grid_container{ 
+    min-height: 100vh;
+    /* min-width: 100vh; */
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    grid-template-rows: 15rem 40rem 9rem;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "main main main"
+    "stats stats stats";
+}
+p{
+  font-size: 2.5rem;
+}
+
+}
+
+/* desktop view */
+@media only screen 
+    and (min-width: 1500px)  { 
+   .grid_container{ 
+    min-height: 100vh;
+    /* min-width: 100vh; */
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    grid-template-rows: 15rem 40rem 9rem;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "main main main"
+    "stats stats stats";
+    scale: 0.7;
+
+}
+p{
+  font-size: 2.5rem;
+}
+
+}

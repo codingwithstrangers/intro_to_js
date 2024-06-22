@@ -62,6 +62,7 @@ function add_book(book_data) {
 function search_book(title) {
   const search_title = String(title).trim().toLowerCase();
   const stored_book = JSON.parse(localStorage.getItem("books")) || [];
+
   // check if book is there
   const book_exist = stored_book.some(
     (book) => book.title.toLowerCase() === search_title
@@ -106,7 +107,7 @@ function search_book(title) {
       edit_book(book);
     };
   } else {
-    alert("That book is not here");
+    // alert("That book is not here");
     // turn disable back on
     document.querySelector(".btn_delete").disabled = true;
     document.querySelector(".btn_edit").disabled = true;
@@ -140,114 +141,7 @@ function delete_book(title) {
   }
 }
 
-// function edit_book(book) {
-//   //   fill in the blanks
-//   document.getElementById("edit_title").value = book.title;
-//   document.getElementById("edit_first_name").value = book.first_name;
-//   document.getElementById("edit_last_name").value = book.last_name;
-//   document.getElementById("edit_page_total").value = book.page_total;
-//   document.getElementById("edit_book_year").value = book.book_year;
-//   if (book.book_read === "Yes") {
-//     document.querySelector(
-//       "input[name=edit_book_read][value=Yes]"
-//     ).checked = true;
-//   } else {
-//     document.querySelector(
-//       "input[name=edit_book_read][value=No]"
-//     ).checked = true;
-//   }
-//   // Show the dialog
-//   document.getElementById("editDialog").style.display = "block";
-
-//   // Set the save button event
-//   document.getElementById("save_edit").onclick = function () {
-//     save_edit(book.title);
-//   };
-//   // Set the cancel button event
-//   document.getElementById("cancel_edit").onclick = function () {
-//     document.getElementById("editDialog").style.display = "none";
-//   };
-// }
-// // add event lisner to call function
-
-
-// function save_edit(originalTitle) {
-//   const edited_title = document.getElementById("edit_title").value.trim();
-//   const edited_first_name = document
-//     .getElementById("edit_first_name")
-//     .value.trim();
-//   const edited_last_name = document
-//     .getElementById("edit_last_name")
-//     .value.trim();
-//   const edited_page_total = document
-//     .getElementById("edit_page_total")
-//     .value.trim();
-//   const edited_book_year = document
-//     .getElementById("edit_book_year")
-//     .value.trim();
-//   const edited_book_read = document.querySelector(
-//     "input[name=edit_book_read]:checked"
-//   ).value;
-
-//   if (
-//     edited_title.length < 2 ||
-//     edited_first_name.length < 2 ||
-//     edited_last_name.length < 2 ||
-//     edited_page_total.length < 1 ||
-//     isNaN(edited_page_total) ||
-//     edited_book_year.length < 2 ||
-//     isNaN(edited_book_year)
-//   ) {
-//     alert("You aint do this ish right, please fill in all blanks bro");
-//     return;
-//   }
-
-//   books = JSON.parse(localStorage.getItem("books")) || [];
-//   const bookIndex = books.findIndex(
-//     (book) => book.title.toLowerCase() === originalTitle.toLowerCase()
-//   );
-
-//   if (bookIndex > -1) {
-//     books[bookIndex] = {
-//       title: edited_title,
-//       first_name: edited_first_name,
-//       last_name: edited_last_name,
-//       page_total: parseInt(edited_page_total, 10),
-//       book_year: parseInt(edited_book_year, 10),
-//       book_read: edited_book_read,
-//     };
-
-//     localStorage.setItem("books", JSON.stringify(books));
-//     alert("Book has been updated");
-
-//     // Hide the dialog
-//     document.getElementById("editDialog").style.display = "none";
-
-//     // Refresh the displayed book details
-//     document.querySelector(".r_nav_results_title").textContent = edited_title;
-//     document.querySelector(".r_nav_results_first").textContent =
-//       edited_first_name;
-//     document.querySelector(".r_nav_results_last").textContent =
-//       edited_last_name;
-//     document.querySelector(
-//       ".r_nav_results_page"
-//     ).textContent = `${edited_page_total} pg`;
-//     document.querySelector(".r_nav_results_year").textContent =
-//       edited_book_year;
-//     document.querySelector(".y_n_book").textContent = edited_book_read;
-//   }
-// }
-
-// document
-//   .getElementById("search_btn")
-//   .addEventListener("click", function (event) {
-//     console.log(event);
-//     const search_title = document.getElementById("search_input").value;
-//     console.log(search_title);
-//     search_book(search_title);
-//   });
-
-
+// function edit_book(book) 
 function edit_book(book) {
     // Prompt the user for new values
     const edited_title = prompt("Edit Title:", book.title);
