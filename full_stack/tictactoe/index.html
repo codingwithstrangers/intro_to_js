@@ -17,9 +17,9 @@
                         <div class="icon"></div>
                     </div>
                     <div class="player1_info">
-                        <p>@Name</p>
+                        <p>@Stranger</p>
                         <p>Rank</p>
-                        <p id="player1_turn">Your Turn</p>
+                        <p id="player1_turn">Your Move</p>
                     </div>
                     </div>
                     <div class="vs_container">
@@ -27,16 +27,17 @@
                     </div>
                     <div class="player_2">
                         <div class='image_container'>
-                            <div class="icon"></div>
+                            <div class="icon2"></div>
                         </div>
                         <div class="player2_info">
                             <p>@Skynet</p>
                             <p>Rank</p>
-                            <p id="player2_turn">Your Turn</p>
+                            <p id="player2_turn">Your Move</p>
                         </div>
                     </div>
                 </div>
-                <div class="scoreboard_container">
+                <div class="match_container">
+                <!-- <div class="scoreboard_container">
                     <div class="score_info">
                         <div class="player_1score">
                             <p>0</p>
@@ -46,46 +47,51 @@
                             <p>0</p>
                         </div>
                     </div>
-                </div>
-                    <div class="match_point">
+                </div> -->
+                    <div class="p1_match_point">
                         <div class="circle1"></div>
                         <div class="circle2"></div>
-                        <div class="circle3"></div>
+                        <!-- <div class="circle3"></div> -->
                     </div>
-                
+                    <div class="p2_match_point">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <!-- <div class="circle3"></div> -->
+                    </div>
+                </div>
         </header>
 
         <main>
             <div class="main_container">
 
-                <row1_1>
-                    <div class="cell1" id="cell1_1"></div>
+                <row1_1 onclick="player1_pick_spot('cell1_1')">
+                    <div class="cell1" id="cell1_1" ></div>
                 </row1_1>
-                <row1_2>
-                    <div class="cell1" id="cell1_2"></div>
+                <row1_2 onclick="player1_pick_spot('cell1_2')">
+                    <div class="cell2" id="cell1_2" ></div>
                 </row1_2>
-                <row1_3>
-                    <div class="cell1" id="cell1_3"></div>
+                <row1_3 onclick="player1_pick_spot('cell1_3')">
+                    <div class="cell3" id="cell1_3" ></div>
                 </row1_3>
             
-                <row2_1>
-                    <div class="cell2" id="cell2_1"></div>
+                <row2_1 onclick="player1_pick_spot('cell2_1')">
+                    <div class="cell4" id="cell2_1" ></div>
                 </row2_1>
-                <row2_2>
-                    <div class="cell2" id="cell2_2"></div>
+                <row2_2 onclick="player1_pick_spot('cell2_2')">
+                    <div class="cell5" id="cell2_2" ></div>
                 </row2_2>
-                <row2_3>
-                    <div class="cell2" id="cell2_3"></div>
+                <row2_3 onclick="player1_pick_spot('cell2_3')">
+                    <div class="cell6" id="cell2_3" ></div>
                 </row2_3>
             
-                <row3_1>
-                    <div class="cell3" id="cell3_1"></div>
+                <row3_1 onclick="player1_pick_spot('cell3_1')">
+                    <div class="cell7" id="cell3_1" ></div>
                 </row3_1>
-                <row3_2>
-                    <div class="cell3" id="cell3_2"></div>
+                <row3_2 onclick="player1_pick_spot('cell3_2')">
+                    <div class="cell8" id="cell3_2" ></div>
                 </row3_2>
-                <row3_3>
-                    <div class="cell3" id="cell3_3"></div>
+                <row3_3 onclick="player1_pick_spot('cell3_3')">
+                    <div class="cell9" id="cell3_3" ></div>
                 </row3_3>
             </div>
 
