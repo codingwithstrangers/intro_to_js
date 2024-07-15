@@ -1,0 +1,4 @@
+1. we want the scroll wheel to move if more than 5 task
+2. We want to run this on a json and store task not done to add  later
+3. a bar to show how much work is done 
+4. a running of task added vs done ??? (idk)

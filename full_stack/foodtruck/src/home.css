@@ -1,11 +1,17 @@
 
 *{
     border:1px red solid ;
-    /* padding: 10px; */
+    padding: 0px;
+    margin: 0px;
+    font-size: x-large;
+    /* background-color:rgb(223, 149, 233) ; */
 }
 
 
 /* Header for unchanging part */
+@media only screen 
+    and (min-width: 430px)  { 
+
 nav{
     display: flex;
     justify-content: space-evenly;
@@ -13,30 +19,57 @@ nav{
     flex-direction: row;
     gap: 15px;
     padding: 15px;
+    min-height: 10vh;
+    background-color: aquamarine;
+    
+}
+#dynamicbutton{
+    display: flex;
+    margin-bottom: -60px;
+    justify-content: space-between;
+    /* gap: 0px;     */
 }
 
-
-#bannercontainer{
+/* #bannercontainer{
     display: flex;
 flex-direction: column-reverse;
 padding: 10px;
-}
-#welcomecontainer{
+} */
+/* #welcomecontainer{
     display: flex;
     flex-direction: column;
-    padding:10px;
+    padding:30px;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
+    
+} */
 
-/* middle */
-
-
-#workinghours2, #workinghours{
+#box_1{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    margin: 30px;
+    background-color: rgb(198, 151, 228);
+}
+
+
+/* middle */
+
+ #workinghours{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    /* padding:30px; */
+}
+
+
+#workinghours2{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 30px;
+    background-color: rgb(198, 151, 228);
 }
 
 /* bottom */
@@ -44,4 +77,59 @@ padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* padding:30px; */
+    text-align: center;
+}
+
+#box_3{
+    margin: 30px;
+    background-color: rgb(198, 151, 228);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* button */
+.btn {
+    padding: 1.1em 2em;
+    background: none;
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+    scale: .90;
+   }
+   
+   .btn:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+   }
+   
+   .btn:hover {
+    background-color: #4cc9f0;
+    color: #fff;
+    box-shadow: 0 2px 0 2px #0d3b66;
+   }
+   
+   .btn:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+   }
+   
+   .btn:active {
+    transform: scale(0.9);
+   }
 }

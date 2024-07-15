@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <button id="homeBtn">Home</button>
-            <button id="menuBtn">Menu</button>
-            <button id="aboutBtn">About</button>
+            <div id="dynamicbutton">
+                <!-- <button id="homeBtn">Home</button>
+            <button id="menuBtn">Menu</button> -->
+                <!-- <button id="aboutBtn">About</button> -->
+                <button class="btn" id="homeBtn" type="button">
+                    <div class="text">Home</div>
+                </button>
+
+                <button class="btn" id="menuBtn" type="button">
+                    <div class="text">Menu</div>
+                </button>
+
+                <button class="btn" id="aboutBtn" type="button">
+                    <div class="text">About</div>
+                </button>
+            </div>
         </nav>
     </header>
     <div id="content">
@@ -31,9 +46,41 @@
         <p id="phone">Phone: 123-456-7890</p>
         <p id="email">@NoDaPlay</p> -->
         <!-- Content will be dynamically injected here -->
-    </div>  
+    </div>
+
+    <div id="menutab">
+        <!-- <div id="app_container">
+            <h6>Apps</h6>
+            <div id="app_items">
+                <p>Chips & Dip (3 types)</p>
+                <p>Starter Plate</p>
+                <p>Chees Fries</p>
+            </div>
+        </div>
+
+        <div id="taco_container">
+            <h6>Tacos</h6>
+            <div id="taco_items">
+                <p>Shrimp taco</p>
+                <p>Beef taco</p>
+                <p>Chicken taco</p>
+            </div>
+        </div>
+
+        <div id="drink_container">
+            <h6>Drinks</h6>
+            <div id="drink_items">
+                <p>Kids Drink</p>
+                <p>Pop</p>
+                <p>Adult Drink</p>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Turn off and on for building -->
     <script type='module' src="home.js"></script>
     <!-- <script src="menu.js"></script>
     <script src="about.js"></script> -->
 </body>
+
 </html>
